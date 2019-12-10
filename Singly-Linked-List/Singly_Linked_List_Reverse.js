@@ -105,29 +105,17 @@ class SinglyLinkedList{
 
 
     //100,201,250,350,999
-   //next = 201, node.next = prev;
-
-
-    
     reverse(){
       var node = this.head;
       this.head = this.tail;
       this.tail = node;
-      var next;
+      var next =null;
       var prev = null;
       for(var i = 0; i < this.length; i++){
         next = node.next; 
-        console.log(next); 
-
         node.next = prev;
-        console.log(node.next);//201
-
         prev = node;
-        console.log( prev);//null
-
         node = next;
-        console.log(node);
-
       }
       return this;
     }
@@ -152,7 +140,8 @@ list.push(350)
 list.push(999)
 
 list.print();
-list.reverse()
+list.reverse();
+list.print();
 
 
 
